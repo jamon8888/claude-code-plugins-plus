@@ -6,6 +6,11 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://claudecodeplugins.io',
   base: '/',
+  redirects: {
+    // Fix 404s from deleted Learning Lab pages (Jan 2026)
+    '/learning/built-system-summary': '/learning/',
+    '/learning/getting-started': '/learning/overview/',
+  },
   build: {
     assets: '_astro',
     inlineStylesheets: 'auto'
